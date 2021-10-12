@@ -1,0 +1,18 @@
+<p>posts works!</p>
+ 
+<input type='text' 
+(keyUp.enter)="createPost(title)"
+(change)="search(title)"
+#title >
+
+<ul>
+    <li *ngFor="let p of posts">
+      {{p.id}}  {{   p.title}}   
+        <button (click)="updatePost(p)" >
+            Update</button>
+    
+        <button (click)="deletePost(p)" >
+            Delete</button>
+        
+    </li> 
+</ul>  
